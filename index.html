@@ -1868,7 +1868,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.M;
     if (G.mountFilm) G.mountFilm($('#filmhost'), n, G.FILM_CHAPTER); G.FILM_CHAPTER = null;
   }
   function viewSolo(n, ch) {
-    app.innerHTML = top('סרטון הסבר') + `<header class="sec-h"><h1>${esc(G.FILM_CH[n][ch])}</h1></header><div id="filmhost"></div>`;
+    app.innerHTML = top('סרטון הסבר').replace(/<button class="home"[^>]*>[^<]*<\/button>/, '') + `<header class="sec-h"><h1>${esc(G.FILM_CH[n][ch])}</h1></header><div id="filmhost"></div>`;
     if (G.mountFilm) G.mountFilm($('#filmhost'), n, ch, true);
   }
   function render(tok) {
